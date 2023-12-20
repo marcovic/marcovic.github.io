@@ -1,0 +1,80 @@
+#uw-mf-modal-skeleton {
+  z-index: 90;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(54,58,65,0.75);
+  overflow: hidden;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#uw-mf-modal-skeleton > div {
+  max-width:992px;
+  min-height:500px;
+  width:992px;
+  height:500px;
+  background-color: white;
+  position: absolute;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.uw-modal-root {
+  min-height:500px;
+}
+
+.circle_spinner_small_animated {
+  width: 40px;
+  height: 40px;
+  transform-origin: center center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: rotate 2s linear infinite;
+
+}
+
+.circle_spinner-path-2 {
+  stroke-width:6px;
+  fill: none;
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  animation: dash 1.3s linear infinite, color 5.2s step-end infinite;
+  stroke-linecap: round;
+  stroke: #1C6FD1;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn); // or 360deg
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px;
+  }
+}
+
+@keyframes color {
+  0% { stroke: #044D80; }
+  25% { stroke: #E54747; }
+  50% { stroke: #68C5ED; }
+  75% { stroke: #FF9D28; }
+}
